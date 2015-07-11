@@ -1,0 +1,106 @@
+{
+  "resources": {
+    "head": [],
+    "body": [
+      {
+        "type": "script",
+        "src": "./install/install.js"
+      },
+      {
+        "type": "script",
+        "if": "options.buttons.email.enabled",
+        "src": "./install/templates/email.js"
+      },
+      {
+        "type": "script",
+        "if": "options.buttons.facebook.enabled",
+        "src": "./install/templates/facebook.js"
+      },
+      {
+        "type": "script",
+        "if": "options.buttons.tumblr.enabled",
+        "src": "./install/templates/tumblr.js"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "container": {
+        "order": 1,
+        "title": "Location",
+        "description": "Select where you want the share buttons to be added to your site.",
+        "type": "object",
+        "format": "element"
+      },
+      "buttons": {
+        "order": 2,
+        "title": "Buttons",
+        "type": "object",
+        "properties": {
+          "email": {
+            "order": 1,
+            "title": "Email",
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "title": "Show",
+                "type": "boolean",
+                "default": false
+              },
+              "subject": {
+                "showIf": {
+                  "buttons.email.enabled": true
+                },
+                "title": "Subject",
+                "type": "string"
+              }
+            }
+          },
+          "facebook": {
+            "order": 2,
+            "title": "Facebook",
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "title": "Show",
+                "type": "boolean",
+                "default": true
+              }
+            }
+          },
+          "tumblr": {
+            "order": 3,
+            "title": "Tumblr",
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "title": "Show",
+                "type": "boolean",
+                "default": true
+              }
+            }
+          }
+        }
+      },
+      "showAdvancedOptions": {
+        "order": 3,
+        "title": "Advanced Options",
+        "type": "boolean"
+      },
+      "advancedOptions": {
+        "showIf": {
+          "showAdvancedOptions": true
+        },
+        "order": 4,
+        "title": "Advanced Options",
+        "type": "object",
+        "properties": {
+          "keepUrlParameters": {
+            "title": "Keep URL Parameters",
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}
