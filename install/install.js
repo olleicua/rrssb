@@ -63,7 +63,7 @@
       if (!element) {
         return;
       }
-      options = this.processOptions(options);
+      this.options = this.processOptions(options);
       element.innerHTML = '<ul class="rrssb-buttons">' + this.buildButtons() + '</ul>';
     }
   }
