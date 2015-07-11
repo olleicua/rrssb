@@ -22,8 +22,9 @@
   window.INSTALL_RRSSB = {
     buttons: [],
     buildButtons: function() {
+      var options = this.options
       return map(this.buttons, function(buttonTemplate) {
-        return buttonTemplate(this.options);
+        return buttonTemplate(options);
       }).join('');
     },
     shareUri: function() {

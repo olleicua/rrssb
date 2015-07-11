@@ -33,11 +33,15 @@
       {
         "type": "script",
         "content": "js/rrssb.min.js",
+        "moduleType": "global",
         "depends": {
           "github.com/jquery/jquery:jquery.js": "jQuery"
         }
       }
     ]
+  },
+  "dependencies": {
+    "github.com/jquery/jquery": ">= 1.7.0, <= 1.10.2"
   },
   "options": {
     "properties": {

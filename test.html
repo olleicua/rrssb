@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="css/rrssb.css" />
+</head>
+
+<body>
+  <div id="container"></div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="install/install.js"></script>
+  <script type="text/javascript" src="install/templates/facebook.js"></script>
+  <script type="text/javascript" src="install/templates/tumblr.js"></script>
+  <script type="text/javascript">
+    INSTALL_RRSSB.init(document.getElementById('container'), {
+   "container": {
+    "selector": "body",
+    "method": "append"
+  },
+  "buttons": {
+    "email": {
+      "enabled": false
+    },
+    "facebook": {
+      "enabled": true
+    },
+    "tumblr": {
+      "enabled": true
+    }
+  },
+  "showAdvancedOptions": false,
+  "advancedOptions": {
+    "keepUrlParameters": false
+  }
+    })
+  </script>
+  <script type="text/javascript" src="js/rrssb.min.js"></script>
+</body>
+
+</html>
