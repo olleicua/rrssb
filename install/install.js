@@ -28,7 +28,8 @@
       }).join('');
     },
     shareUri: function() {
-      if (this.options.advancedOptions.keepUrlParameters) {
+      if (this.options.advancedOptions &&
+          this.options.advancedOptions.keepUrlParameters) {
         return window.location.href;
       } else {
         return window.location.protocol + '//' + window.location.hostname + window.location.pathname;
