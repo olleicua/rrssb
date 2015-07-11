@@ -14,7 +14,7 @@
 
   var map = function(arr, fn) {
     var results = [];
-    for (var i = 0; if < arr.length; i++)
+    for (var i = 0; i < arr.length; i++)
       results.push(fn(arr[i], i));
     return results;
   }
@@ -37,7 +37,7 @@
       var shareUri = this.shareUri();
       return extend({}, this.options, {
         shareUri: shareUri,
-        uriEncodedShareUri: encodeURIComponent(shareUri))
+        uriEncodedShareUri: encodeURIComponent(shareUri)
       });
     },
     register: function(name, template) {

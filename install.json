@@ -1,6 +1,11 @@
 {
   "resources": {
-    "head": [],
+    "head": [
+      {
+        "type": "style",
+        "src": "./css/rrssb.css"
+      }
+    ],
     "body": [
       {
         "type": "script",
@@ -20,6 +25,14 @@
         "type": "script",
         "if": "options.buttons.tumblr.enabled",
         "src": "./install/templates/tumblr.js"
+      },
+      {
+        "type": "script",
+        "content": "INSTALL_RRSSB.init(Eager.createElement(INSTALL_OPTIONS.container), INSTALL_OPTIONS)"
+      },
+      {
+        "type": "script",
+        "content": "js/rrssb.min.js"
       }
     ]
   },
