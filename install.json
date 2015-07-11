@@ -28,11 +28,11 @@
       },
       {
         "type": "script",
-        "content": "INSTALL_RRSSB.init(Eager.createElement(INSTALL_OPTIONS.container), INSTALL_OPTIONS)"
+        "contents": "INSTALL_RRSSB.init(Eager.createElement(INSTALL_OPTIONS.container), INSTALL_OPTIONS)"
       },
       {
         "type": "script",
-        "content": "js/rrssb.min.js",
+        "src": "js/rrssb.min.js",
         "moduleType": "global",
         "depends": {
           "github.com/jquery/jquery:jquery.js": "jQuery"
