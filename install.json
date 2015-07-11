@@ -32,7 +32,10 @@
       },
       {
         "type": "script",
-        "content": "js/rrssb.min.js"
+        "content": "js/rrssb.min.js",
+        "depends": {
+          "github.com/jquery/jquery:jquery.js": "jQuery"
+        }
       }
     ]
   },
