@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="css/rrssb.css" />
+</head>
+
+<body>
+  <div id="container"></div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="install/install.js"></script>
+  <script type="text/javascript" src="install/templates/email.js"></script>
+  <script type="text/javascript" src="install/templates/facebook.js"></script>
+  <script type="text/javascript" src="install/templates/tumblr.js"></script>
+  <script type="text/javascript" src="install/templates/linkedin.js"></script>
+  <script type="text/javascript" src="install/templates/twitter.js"></script>
+  <script type="text/javascript" src="install/templates/reddit.js"></script>
+  <script type="text/javascript" src="install/templates/hackernews.js"></script>
+  <script type="text/javascript" src="install/templates/googleplus.js"></script>
+  <script type="text/javascript" src="install/templates/pinterest.js"></script>
+  <script type="text/javascript" src="install/templates/pocket.js"></script>
+  <script type="text/javascript" src="install/templates/vk.js"></script>
+  <script type="text/javascript">
+    INSTALL_RRSSB.init(document.getElementById('container'), {
+   "container": {
+    "selector": "body",
+    "method": "append"
+  },
+  "buttons": {
+    "email": {
+      "enabled": true,
+      subject: 'This is an email subject'
+    },
+    "facebook": {
+      "enabled": true
+    },
+    "tumblr": {
+      "enabled": true
+    },
+    "linkedin": {
+      enabled: true,
+    title: 'This is a linkedin title',
+      summary: 'This is a linkedin summary'
+    },
+    "twitter": {
+      enabled: true,
+      text: 'This is some text for a tweet'
+    },
+    "reddit": {
+    enabled: true,
+      title: 'this is a reddit title',
+      text: 'This is some text for reddit'
+    },
+    "hackernews": {
+    enabled: true,
+    title: 'this is a hackernews title',
+    text: 'This is some text for hackernews'
+    },
+    "googleplus": {
+    enabled: true,
+    text: 'This is some text for google+'
+    },
+    "pinterest": {
+    enabled: true,
+    description: 'this is a description for pinterest'
+    },
+    "pocket": {
+    enabled: true
+    },
+    "vk": {
+    enabled: true
+    }
+  },
+  "showAdvancedOptions": false,
+  "advancedOptions": {
+    "keepUrlParameters": false
+  }
+    })
+  </script>
+  <script type="text/javascript" src="js/rrssb.min.js"></script>
+</body>
+
+</html>

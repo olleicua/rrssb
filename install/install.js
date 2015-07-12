@@ -28,12 +28,18 @@
     buildButtons: function() {
       var options = this.options
       return map(this.buttons, function(buttonTemplate) {
-        return buttonTemplate(options);
+        var name = buttonTemplate[0], templateFunction = buttonTemplate[1];
+        if (options.buttons[name].enabled) {
+          return templateFunction(options);
+        } else {
+          return '';
+        }
       }).join('');
     },
 
     // generate the uri that will be shared
     shareUri: function() {
+      // TODO: this should look for OG tags
       if (this.options.advancedOptions &&
           this.options.advancedOptions.keepUrlParameters) {
         // include url parameters (e.g. 'example.com?parameter=value'
@@ -54,7 +60,7 @@
 
     // add a button template function to the array of registered buttons
     register: function(name, template) {
-      this.buttons.push(template);
+      this.buttons.push([name, template]);
     },
 
     // add the buttons to the DOM
