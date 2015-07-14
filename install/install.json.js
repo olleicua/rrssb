@@ -58,6 +58,7 @@ for (var key in buttons) {
     'type': 'object',
     'properties': {
       'enabled': {
+        'order': 1,
         'title': 'Show',
         'type': 'boolean',
         'default': obj.default || false
@@ -68,7 +69,7 @@ for (var key in buttons) {
     for (var j = 0; j < obj.options.length; j++) {
       var option = obj.options[j];
       buttonObj[key].properties[option] = {
-        'order': j + 1,
+        'order': j + 2,
         'showIf': {},
         'title': capitalize(option),
         'type': 'string'

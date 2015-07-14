@@ -103,12 +103,13 @@
             "type": "object",
             "properties": {
               "enabled": {
+                "order": 1,
                 "title": "Show",
                 "type": "boolean",
                 "default": false
               },
               "subject": {
-                "order": 1,
+                "order": 2,
                 "showIf": {
                   "buttons.email.enabled": true
                 },
@@ -123,6 +124,7 @@
             "type": "object",
             "properties": {
               "enabled": {
+                "order": 1,
                 "title": "Show",
                 "type": "boolean",
                 "default": true
@@ -135,6 +137,7 @@
             "type": "object",
             "properties": {
               "enabled": {
+                "order": 1,
                 "title": "Show",
                 "type": "boolean",
                 "default": false
@@ -147,12 +150,13 @@
             "type": "object",
             "properties": {
               "enabled": {
+                "order": 1,
                 "title": "Show",
                 "type": "boolean",
                 "default": false
               },
               "title": {
-                "order": 1,
+                "order": 2,
                 "showIf": {
                   "buttons.linkedin.enabled": true
                 },
@@ -160,7 +164,7 @@
                 "type": "string"
               },
               "summary": {
-                "order": 2,
+                "order": 3,
                 "showIf": {
                   "buttons.linkedin.enabled": true
                 },
@@ -175,12 +179,13 @@
             "type": "object",
             "properties": {
               "enabled": {
+                "order": 1,
                 "title": "Show",
                 "type": "boolean",
                 "default": true
               },
               "text": {
-                "order": 1,
+                "order": 2,
                 "showIf": {
                   "buttons.twitter.enabled": true
                 },
@@ -195,12 +200,13 @@
             "type": "object",
             "properties": {
               "enabled": {
+                "order": 1,
                 "title": "Show",
                 "type": "boolean",
                 "default": false
               },
               "title": {
-                "order": 1,
+                "order": 2,
                 "showIf": {
                   "buttons.reddit.enabled": true
                 },
@@ -208,7 +214,7 @@
                 "type": "string"
               },
               "text": {
-                "order": 2,
+                "order": 3,
                 "showIf": {
                   "buttons.reddit.enabled": true
                 },
@@ -223,12 +229,13 @@
             "type": "object",
             "properties": {
               "enabled": {
+                "order": 1,
                 "title": "Show",
                 "type": "boolean",
                 "default": false
               },
               "title": {
-                "order": 1,
+                "order": 2,
                 "showIf": {
                   "buttons.hackernews.enabled": true
                 },
@@ -236,7 +243,7 @@
                 "type": "string"
               },
               "text": {
-                "order": 2,
+                "order": 3,
                 "showIf": {
                   "buttons.hackernews.enabled": true
                 },
@@ -251,12 +258,13 @@
             "type": "object",
             "properties": {
               "enabled": {
+                "order": 1,
                 "title": "Show",
                 "type": "boolean",
                 "default": true
               },
               "text": {
-                "order": 1,
+                "order": 2,
                 "showIf": {
                   "buttons.googleplus.enabled": true
                 },
@@ -271,12 +279,13 @@
             "type": "object",
             "properties": {
               "enabled": {
+                "order": 1,
                 "title": "Show",
                 "type": "boolean",
                 "default": false
               },
               "description": {
-                "order": 1,
+                "order": 2,
                 "showIf": {
                   "buttons.pinterest.enabled": true
                 },
@@ -291,6 +300,7 @@
             "type": "object",
             "properties": {
               "enabled": {
+                "order": 1,
                 "title": "Show",
                 "type": "boolean",
                 "default": false
@@ -303,6 +313,7 @@
             "type": "object",
             "properties": {
               "enabled": {
+                "order": 1,
                 "title": "Show",
                 "type": "boolean",
                 "default": false
