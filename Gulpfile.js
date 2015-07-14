@@ -51,4 +51,8 @@ gulp.task('svg', function() {
   .pipe(gulp.dest('icons/'));
 });
 
+gulp.task('install.json', function() {
+  require('./install/install.json.js');
+});
+
 gulp.task('default', ['serve']);

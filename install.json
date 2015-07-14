@@ -28,6 +28,46 @@
       },
       {
         "type": "script",
+        "if": "options.buttons.linkedin.enabled",
+        "src": "./install/templates/linkedin.js"
+      },
+      {
+        "type": "script",
+        "if": "options.buttons.twitter.enabled",
+        "src": "./install/templates/twitter.js"
+      },
+      {
+        "type": "script",
+        "if": "options.buttons.reddit.enabled",
+        "src": "./install/templates/reddit.js"
+      },
+      {
+        "type": "script",
+        "if": "options.buttons.hackernews.enabled",
+        "src": "./install/templates/hackernews.js"
+      },
+      {
+        "type": "script",
+        "if": "options.buttons.googleplus.enabled",
+        "src": "./install/templates/googleplus.js"
+      },
+      {
+        "type": "script",
+        "if": "options.buttons.pinterest.enabled",
+        "src": "./install/templates/pinterest.js"
+      },
+      {
+        "type": "script",
+        "if": "options.buttons.pocket.enabled",
+        "src": "./install/templates/pocket.js"
+      },
+      {
+        "type": "script",
+        "if": "options.buttons.vk.enabled",
+        "src": "./install/templates/vk.js"
+      },
+      {
+        "type": "script",
         "contents": "INSTALL_RRSSB.init(Eager.createElement(INSTALL_OPTIONS.container), INSTALL_OPTIONS)"
       },
       {
@@ -68,6 +108,7 @@
                 "default": false
               },
               "subject": {
+                "order": 1,
                 "showIf": {
                   "buttons.email.enabled": true
                 },
@@ -96,7 +137,175 @@
               "enabled": {
                 "title": "Show",
                 "type": "boolean",
+                "default": false
+              }
+            }
+          },
+          "linkedin": {
+            "order": 4,
+            "title": "LinkedIn",
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "title": "Show",
+                "type": "boolean",
+                "default": false
+              },
+              "title": {
+                "order": 1,
+                "showIf": {
+                  "buttons.linkedin.enabled": true
+                },
+                "title": "Title",
+                "type": "string"
+              },
+              "summary": {
+                "order": 2,
+                "showIf": {
+                  "buttons.linkedin.enabled": true
+                },
+                "title": "Summary",
+                "type": "string"
+              }
+            }
+          },
+          "twitter": {
+            "order": 5,
+            "title": "Twitter",
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "title": "Show",
+                "type": "boolean",
                 "default": true
+              },
+              "text": {
+                "order": 1,
+                "showIf": {
+                  "buttons.twitter.enabled": true
+                },
+                "title": "Text",
+                "type": "string"
+              }
+            }
+          },
+          "reddit": {
+            "order": 6,
+            "title": "reddit",
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "title": "Show",
+                "type": "boolean",
+                "default": false
+              },
+              "title": {
+                "order": 1,
+                "showIf": {
+                  "buttons.reddit.enabled": true
+                },
+                "title": "Title",
+                "type": "string"
+              },
+              "text": {
+                "order": 2,
+                "showIf": {
+                  "buttons.reddit.enabled": true
+                },
+                "title": "Text",
+                "type": "string"
+              }
+            }
+          },
+          "hackernews": {
+            "order": 7,
+            "title": "Hacker News",
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "title": "Show",
+                "type": "boolean",
+                "default": false
+              },
+              "title": {
+                "order": 1,
+                "showIf": {
+                  "buttons.hackernews.enabled": true
+                },
+                "title": "Title",
+                "type": "string"
+              },
+              "text": {
+                "order": 2,
+                "showIf": {
+                  "buttons.hackernews.enabled": true
+                },
+                "title": "Text",
+                "type": "string"
+              }
+            }
+          },
+          "googleplus": {
+            "order": 8,
+            "title": "Google+",
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "title": "Show",
+                "type": "boolean",
+                "default": true
+              },
+              "text": {
+                "order": 1,
+                "showIf": {
+                  "buttons.googleplus.enabled": true
+                },
+                "title": "Text",
+                "type": "string"
+              }
+            }
+          },
+          "pinterest": {
+            "order": 9,
+            "title": "Pinterest",
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "title": "Show",
+                "type": "boolean",
+                "default": false
+              },
+              "description": {
+                "order": 1,
+                "showIf": {
+                  "buttons.pinterest.enabled": true
+                },
+                "title": "Description",
+                "type": "string"
+              }
+            }
+          },
+          "pocket": {
+            "order": 10,
+            "title": "Pocket",
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "title": "Show",
+                "type": "boolean",
+                "default": false
+              }
+            }
+          },
+          "vk": {
+            "order": 11,
+            "title": "Vk",
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "title": "Show",
+                "type": "boolean",
+                "default": false
               }
             }
           }

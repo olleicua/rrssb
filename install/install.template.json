@@ -1,0 +1,67 @@
+{
+  "resources": {
+    "head": [
+      {
+        "type": "style",
+        "src": "./css/rrssb.css"
+      }
+    ],
+    "body": [
+      {
+        "type": "script",
+        "src": "./install/install.js"
+      },
+      {
+        "type": "script",
+        "contents": "INSTALL_RRSSB.init(Eager.createElement(INSTALL_OPTIONS.container), INSTALL_OPTIONS)"
+      },
+      {
+        "type": "script",
+        "src": "js/rrssb.min.js",
+        "moduleType": "global",
+        "depends": {
+          "github.com/jquery/jquery:jquery.js": "jQuery"
+        }
+      }
+    ]
+  },
+  "dependencies": {
+    "github.com/jquery/jquery": ">= 1.7.0, <= 1.10.2"
+  },
+  "options": {
+    "properties": {
+      "container": {
+        "order": 1,
+        "title": "Location",
+        "description": "Select where you want the share buttons to be added to your site.",
+        "type": "object",
+        "format": "element"
+      },
+      "buttons": {
+        "order": 2,
+        "title": "Buttons",
+        "type": "object",
+        "properties": {}
+      },
+      "showAdvancedOptions": {
+        "order": 3,
+        "title": "Advanced Options",
+        "type": "boolean"
+      },
+      "advancedOptions": {
+        "showIf": {
+          "showAdvancedOptions": true
+        },
+        "order": 4,
+        "title": "Advanced Options",
+        "type": "object",
+        "properties": {
+          "keepUrlParameters": {
+            "title": "Keep URL Parameters",
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}
