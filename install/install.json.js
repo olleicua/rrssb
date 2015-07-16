@@ -2,39 +2,38 @@ var base = require('./install.template.json');
 var fs = require('fs');
 var formatJSON = require('format-json');
 var buttons = {
-  email: {
-    options: ['subject']
-  },
-  facebook: {
-    'default': true
-  },
-  tumblr: {},
-  linkedin: {
-    title: 'LinkedIn',
-    options: ['title', 'summary']
-  },
   twitter: {
     options: ['text'],
     'default': true
   },
-  reddit: {
-    title: 'reddit',
-    options: ['title', 'text']
-  },
-  hackernews: {
-    title: 'Hacker News',
-    options: ['title', 'text']
+  facebook: {
+    'default': true
   },
   googleplus: {
     title: 'Google+',
-    options: ['text'],
     'default': true
   },
-  pinterest: {
-    options: ['description']
+  pinterest: {},
+  linkedin: {
+    title: 'LinkedIn',
+    options: ['title', 'summary']
+  },
+  tumblr: {},
+  reddit: {
+    title: 'reddit',
+    options: ['title']
+  },
+  hackernews: {
+    title: 'Hacker News',
+    options: ['title']
   },
   pocket: {},
-  vk: {}
+  vk: {
+    title: 'VK'
+  },
+  email: {
+    options: ['subject', 'body']
+  }
 };
 
 var capitalize = function(string) {
@@ -66,15 +65,24 @@ for (var key in buttons) {
     }
   };
   if (obj.options) {
+    buttonObj[key].properties.auto = {
+      'order': 2,
+      'showIf': {},
+      'title': 'Automatically set sharing text from page contents',
+      'type': 'boolean',
+      'default': true
+    };
+    buttonObj[key].properties.auto.showIf['buttons.' + key + '.enabled'] = true;
     for (var j = 0; j < obj.options.length; j++) {
       var option = obj.options[j];
       buttonObj[key].properties[option] = {
-        'order': j + 2,
+        'order': j + 3,
         'showIf': {},
         'title': capitalize(option),
         'type': 'string'
       };
       buttonObj[key].properties[option].showIf['buttons.' + key + '.enabled'] = true;
+      buttonObj[key].properties[option].showIf['buttons.' + key + '.auto'] = false;
     }
   }
 }

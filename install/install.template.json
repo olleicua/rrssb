@@ -43,21 +43,21 @@
         "type": "object",
         "properties": {}
       },
-      "showAdvancedOptions": {
+      "useAdvancedOptions": {
         "order": 3,
         "title": "Advanced Options",
         "type": "boolean"
       },
       "advancedOptions": {
-        "showIf": {
-          "showAdvancedOptions": true
-        },
         "order": 4,
+        "showIf": {
+          "useAdvancedOptions": true
+        },
         "title": "Advanced Options",
         "type": "object",
         "properties": {
           "keepUrlParameters": {
-            "title": "Keep URL Parameters",
+            "title": "Use full URL, including any query parameters or hash, in the shared URL",
             "type": "boolean"
           }
         }
