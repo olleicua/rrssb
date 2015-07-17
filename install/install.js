@@ -52,7 +52,6 @@
     page.url = getMeta('meta[property="og:url"][content]', 'content', true) || page.url;
     page.title = getMeta('meta[property="og:title"][content]', 'content') || page.title;
 
-    console.log(page);
     return page;
   };
 
