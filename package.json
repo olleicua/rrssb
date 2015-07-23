@@ -36,6 +36,7 @@
     "gulp-rename": "*",
     "gulp-sass": "^2.0.3",
     "gulp-uglify": "*",
-    "gulp-util": "*"
+    "gulp-util": "*",
+    "format-json": "^1.0.3"
   }
 }
